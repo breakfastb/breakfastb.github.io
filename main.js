@@ -72,7 +72,7 @@ $('#priceCalc').submit(function(e) {
         total = base;
     }
 
-   $('.result').find('span').text(total+'$');
+   $('.result').find('span').text(total);
    if(no>=1) {
        $('.result').slideDown();
    }
