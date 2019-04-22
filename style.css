@@ -158,7 +158,11 @@ a:focus {
 }
 
 #social a {
+<<<<<<< HEAD
     color: #fff !important;
+=======
+    color: ##b9b9b9;
+>>>>>>> b3d28fd03937b8cb2629854ae18ed390b3a5398c
 }
 
 #social li:hover a,
