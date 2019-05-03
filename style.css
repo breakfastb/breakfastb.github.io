@@ -146,7 +146,7 @@ a:focus {
     margin: 0 2em 1em 2em;
 }
 
-#social li {
+#social a {
     background: transparent;
     border: 2px solid #fff;
     margin: 0.5em;
@@ -158,23 +158,15 @@ a:focus {
 }
 
 #social a {
-<<<<<<< HEAD
-    color: #fff !important;
-=======
-    color: ##b9b9b9;
->>>>>>> b3d28fd03937b8cb2629854ae18ed390b3a5398c
+    color: #b9b9b9;
 }
 
-#social li:hover a,
-#social li:hover #patreon {
+#social a:hover ,
+#social a:hover #patreon {
     color: var(--accent) !important;
     fill: var(--accent) !important;
     transition: 300ms all;
-}
-
-#social li:hover {
     background: #fff !important;
-    transition: 300ms all;
 }
 
 #one {

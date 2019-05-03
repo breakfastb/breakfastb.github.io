@@ -12,7 +12,7 @@ var hb = [{
     'type': 'colored sketch',
     'info': {
         'desc': 'A sketch with spots of color',
-        'price': '25'
+        'price': '30'
     }
 }, {
     'type': 'colored sketch + shading',
@@ -33,19 +33,19 @@ var fb = [{
     'type': 'colored sketch',
     'info': {
         'desc': 'A sketch with spots of color',
-        'price': '35'
+        'price': '45'
     }
 }, {
     'type': 'colored sketch + shading',
     'info': {
         'desc': 'More detailed coloring',
-        'price': '40'
+        'price': '50'
     }
 }, {
     'type': 'full color',
     'info': {
         'desc': 'Full coloring + rendering',
-        'price': '50'
+        'price': '60'
     }
 
 }];
@@ -91,14 +91,48 @@ $('#priceCalc').submit(function(e) {
     var typeP = parseInt($('#commType').val());
     var colorP = parseInt($('#colorType').val());
     var base = typeP + colorP;
-
-    if (no > 1) {
-        var base = typeP + colorP;
-        var total = base + ((no - 1) * (base * 0.75));
+    
+    if (no > 2) {
+        if ($('#commType').val()!= 15) {
+            if (no > 1 && $('#commType')) {
+                var base = typeP + colorP;
+                var total = base + ((no - 1) * (base * 0.9));
+            }
+            else {
+                total = base;
+            }
+        }
+        
+        else if ($('#commType').val() == 15) {
+            if($('#colorType').val() == 5) {
+                var base = typeP;
+            }
+            if($('#colorType').val() == 15) {
+                var base = typeP + 5;
+            }
+            var total = base + ((no - 1) * (base * 0.9));
+        }   
     }
-
     else {
-        total = base;
+        if ($('#commType').val()!= 15) {
+            if (no > 1 && $('#commType')) {
+                var base = typeP + colorP;
+                var total = base + ((no - 1) * (base * 0.75));
+            }
+            else {
+                total = base;
+            }
+        }
+        
+        else if ($('#commType').val() == 15) {
+            if($('#colorType').val() == 5) {
+                var base = typeP;
+            }
+            if($('#colorType').val() == 15) {
+                var base = typeP + 5;
+            }
+            var total = base + ((no - 1) * (base * 0.75));
+        }   
     }
 
     $('#result').find('p').text('$' + total);
