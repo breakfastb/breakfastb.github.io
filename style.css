@@ -33,6 +33,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     transition: background-image 300ms;
+    position: relative;
 }
 
 .block {
