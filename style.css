@@ -267,17 +267,19 @@ input {
 }
 
 
-@media (min-width:200px) and (max-width:600px) {
+@media (max-width:600px) {
     .block,
     .block a {
-        font-size: 2em;
+        font-size: 1.25em;
     }
     h1 {
         font-size: 4em;
     }
+    #comm h1 {
+        font-size:3em;
+    }
     #comm>h2 {
-        font-size: 2em !important;
-        opacity: 0.3;
+        opacity: 0.5;
     }
     #comm>h3 {
         font-size: 1em !important;
@@ -285,7 +287,7 @@ input {
     h2,
     #ok,
     #ng {
-        font-size: 3.5em !important;
+        font-size: 2em !important;
     }
     p,
     li,
@@ -294,7 +296,10 @@ input {
     input,
     select,
     button {
-        font-size: 2.5em !important;
+        font-size: 1.25em !important;
+    }
+    #main p {
+        word-wrap:break-word;
     }
     option {
         font-size: 12px !important;
@@ -303,11 +308,10 @@ input {
         margin-bottom: 1em;
     }
     #links {
-        font-size: 2em;
+        font-size: 0.8em;
     }
     #comm {
-        padding-top: 6vh;
-        padding-bottom: 6vh;
+        padding:8vh 0vh;
     }
     #comm .price {
         font-weight: 700;
@@ -317,9 +321,12 @@ input {
     }
     #comm #thumbs {
         flex-direction: column;
+        justify-content:center;
+        text-align:center;
+        align-items:center;
     }
     #thumbs .card {
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
     #thumbs .card img {
@@ -336,7 +343,7 @@ input {
     }
 }
 
-@media (max-width:900px) {
+@media (min-width:601px) and (max-width:900px) {
     .block,
     .block a {
         font-size: 1.25em;
