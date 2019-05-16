@@ -155,7 +155,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script>
 		$('#priceCalc').submit(function(e) {
 			e.preventDefault();
@@ -217,17 +217,17 @@
 		});
 
 		$(document).ready(function() {
-			$('#load').fadeOut();	
+			$('#load').fadeOut();
 		});
-		
-		$(document).on('scroll', function() {
+
+		$(window).on('scroll',function() {
 			if ($(this).scrollTop() >= $('#comm').position().top) {
-				$('#wrap').css('background-image','url("banner_sketch.png")');
+				$('#wrap').css('background-image', 'url("banner_sketch.png")');
 			}
 			else {
-				$('#wrap').css('background-image','url("banner.png")');
+				$('#wrap').css('background-image', 'url("banner.png")');
 			}
-		})
+		});
 	</script>
 </body>
 
