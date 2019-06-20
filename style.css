@@ -82,7 +82,6 @@ body {
 }
 
 #comm .sample {
-  height: 30em;
   width: auto;
   object-fit: cover;
   object-position: center;
